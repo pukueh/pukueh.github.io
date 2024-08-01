@@ -19,23 +19,28 @@
   <meta name="author" content="Pukueh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="前言  对于写博客的同学来说，图床几乎是必不可少的。最开始我简单的使用了不知名在线图床，然后有一天图片突然加载不起来了，为了规避风险，于是想自己搭建一个图床。 一开始想要尝试的方案是Cloudflare R2 + WebP Cloud + PicGo，可惜Cloudflare R2服务的开通需要信用卡，作为学生没有条件随放弃。转而使用目前的方案。 本篇是用于记录个人图床的搭建。   一、可能需要的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2024/07/31/hello-world/index.html">
+<meta property="og:title" content="基于GitHub+jsDelivr+PicGo方案的图床搭建">
+<meta property="og:url" content="http://example.com/2024/07/02/%E5%9F%BA%E4%BA%8EGitHub-jsDelivr-PicGo%E6%96%B9%E6%A1%88%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="Pukueh‘s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="前言  对于写博客的同学来说，图床几乎是必不可少的。最开始我简单的使用了不知名在线图床，然后有一天图片突然加载不起来了，为了规避风险，于是想自己搭建一个图床。 一开始想要尝试的方案是Cloudflare R2 + WebP Cloud + PicGo，可惜Cloudflare R2服务的开通需要信用卡，作为学生没有条件随放弃。转而使用目前的方案。 本篇是用于记录个人图床的搭建。   一、可能需要的">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-07-30T16:22:11.557Z">
-<meta property="article:modified_time" content="2024-07-30T16:22:11.557Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pukueh/ImagineHosting@main/images_for_blogs/202408020017493.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Luminous-ee/ImgBed/photos/img2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pukueh/ImagineHosting@main/images_for_blogs/202408020026149.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pukueh/ImagineHosting@main/images_for_blogs/202408020031502.png">
+<meta property="article:published_time" content="2024-07-01T16:40:18.000Z">
+<meta property="article:modified_time" content="2024-08-01T16:41:11.984Z">
 <meta property="article:author" content="Pukueh">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pukueh/ImagineHosting@main/images_for_blogs/202408020017493.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hello World - Pukueh‘s Blog</title>
+  <title>基于GitHub+jsDelivr+PicGo方案的图床搭建 - Pukueh‘s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +217,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="基于GitHub+jsDelivr+PicGo方案的图床搭建"></span>
           
         </div>
 
@@ -223,8 +228,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-31 00:22" pubdate>
-          July 31, 2024 am
+        <time datetime="2024-07-02 00:40" pubdate>
+          July 2, 2024 am
         </time>
       </span>
     
@@ -235,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 words
+          1.6k words
         
       </span>
     
@@ -246,7 +251,7 @@
         
         
         
-          1 mins
+          14 mins
         
       </span>
     
@@ -283,24 +288,159 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">基于GitHub+jsDelivr+PicGo方案的图床搭建</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<ul>
+<li>对于写博客的同学来说，图床几乎是必不可少的。最开始我简单的使用了不知名在线图床，然后有一天图片突然加载不起来了，为了规避风险，于是想自己搭建一个图床。</li>
+<li>一开始想要尝试的方案是<strong>Cloudflare R2 + WebP Cloud + PicGo</strong>，可惜Cloudflare R2服务的开通需要信用卡，作为学生没有条件随放弃。转而使用目前的方案。</li>
+<li>本篇是用于记录个人图床的搭建。</li>
+</ul>
+<hr>
+<h1 id="一、可能需要的前置知识"><a href="#一、可能需要的前置知识" class="headerlink" title="一、可能需要的前置知识"></a>一、可能需要的前置知识</h1><ul>
+<li><p>计算机网络相关知识</p>
+</li>
+<li><p>命令行操作</p>
+</li>
+<li><p>GitHub基本操作</p>
+</li>
+</ul>
+<h1 id="二、该方案的优缺点"><a href="#二、该方案的优缺点" class="headerlink" title="二、该方案的优缺点"></a>二、该方案的优缺点</h1><ul>
+<li><p>优点：</p>
+<ul>
+<li>免费：GitHub提供免费的存储空间，且对于公开仓库没有存储限制。</li>
+<li>高速访问：通过jsDelivr CDN加速图片分发，提高全球访问速度。</li>
+<li>易于集成：PicGo等图床客户端支持一键上传，方便快捷。</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li>公开性：GitHub公开仓库的内容是公开的，不适合存储私密图片。</li>
+<li>依赖外部服务：依赖于GitHub和jsDelivr的服务稳定性，如果其中任何一个服务出现问题，可能会影响到图片的访问。</li>
+</ul>
+</li>
+</ul>
+<h1 id="三、GitHub-jsDelivr-CDN-PicGo搭建图床原理简介"><a href="#三、GitHub-jsDelivr-CDN-PicGo搭建图床原理简介" class="headerlink" title="三、GitHub + jsDelivr CDN + PicGo搭建图床原理简介"></a>三、GitHub + jsDelivr CDN + PicGo搭建图床原理简介</h1><ul>
+<li><p><strong>图床（Image Hosting）</strong>是指提供在线存储、分享和展示图片的服务平台。用户可以将图片上传到图床，然后通过链接在其他网站、论坛、博客或者社交媒体上分享图片。</p>
+</li>
+<li><p>以下是一些知名的图床服务：</p>
+<ul>
+<li><strong>Imgur</strong>：一个流行的图床服务，广泛用于论坛和社交媒体。</li>
+<li><strong>Flickr</strong>：虽然主要是一个照片分享社区，但也提供图床服务。</li>
+<li><strong>Google Photos</strong>：用户可以上传图片并分享链接，虽然它更多是一个个人照片存储服务。</li>
+<li><strong>SmugMug</strong>：提供高质量的图片托管服务，适合专业摄影师。</li>
+<li><strong>PostImage</strong>：提供简单快捷的图片上传服务。</li>
+</ul>
+<p>在中国大陆，也有许多国内的图床服务，如：</p>
+<ul>
+<li><strong>七牛云</strong>：提供图片、文件等静态资源的存储和CDN加速服务。</li>
+<li><strong>又拍云</strong>：提供图片存储、处理和加速服务。</li>
+<li><strong>腾讯云</strong>：也提供图片存储和分享服务。</li>
+</ul>
+</li>
+<li><p><strong>jsDelivr</strong>：jsDelivr是一个开源的CDN（内容分发网络），它通过在全球各地的数据中心缓存静态内容来加速网站访问速度。对于图床来说，jsDelivr用于缓存GitHub仓库中的图片文件，并将其分发到全球用户。</p>
+</li>
+<li><p><strong>PicGo</strong>：PicGo是一个轻量级的图片上传工具，它支持多种图床服务，包括GitHub。PicGo允许用户将本地图片一键上传到图床，并自动生成可复用的链接。</p>
+</li>
+<li><p><strong>CDN</strong>，即内容分发网络（Content Delivery Network），是一种分布式网络服务，旨在通过在全球多个地理位置部署服务器，来提供快速的内容分发和访问。CDN的工作原理是通过在用户请求内容时，将内容从源服务器缓存到一个距离用户最近的节点服务器上，从而缩短用户与服务器之间的物理距离，减少数据传输时间。</p>
+</li>
+<li><p><strong>工作流程</strong>：</p>
+<ol>
+<li><strong>上传图片</strong>：使用PicGo等工具将本地图片上传到GitHub仓库。</li>
+<li><strong>版本控制</strong>：GitHub自动对上传的图片进行版本控制，允许用户追踪图片的历史更改。</li>
+<li><strong>图片存储</strong>：图片存储在GitHub仓库中。</li>
+<li><strong>CDN加速</strong>：jsDelivr从GitHub仓库中获取图片，并在全球范围内缓存，以便快速向用户分发。</li>
+<li><strong>链接生成</strong>：用户通过PicGo等工具获取图片的链接，这些链接通常是动态生成的，可以直接在网页或代码中使用。</li>
+<li><strong>访问图片</strong>：用户通过jsDelivr CDN获取图片，享受高速的访问体验。</li>
+</ol>
+</li>
+</ul>
+<h1 id="四、开始搭建"><a href="#四、开始搭建" class="headerlink" title="四、开始搭建"></a>四、开始搭建</h1><h2 id="1-新建-GitHub-仓库并生成-Token"><a href="#1-新建-GitHub-仓库并生成-Token" class="headerlink" title="1. 新建 GitHub 仓库并生成 Token"></a>1. 新建 GitHub 仓库并生成 Token</h2><hr>
+<ol>
+<li><p>注册 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 账号，登录。</p>
+</li>
+<li><p>创建一个公开仓库（注意这里仓库要设置成公开的，否则无法访问），仓库名随意，如 <code>ImagineHosting</code> ， &gt; 下方选择<code>Public</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pukueh/ImagineHosting@main/images_for_blogs/202408020017493.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>进入账户设置: <code>Settings</code>-&gt;<code>Developer settings</code>-&gt;<code>Personal access tokens</code>-&gt;生成新的token</p>
+<p><code>Note</code> 做一些描述，勾选上 <code>repo</code> 的相关权限，即可生成一个 Token。如下图：</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Luminous-ee/ImgBed/photos/img2.png"><img src="https://cdn.jsdelivr.net/gh/Luminous-ee/ImgBed/photos/img2.png" srcset="/img/loading.gif" lazyload alt="img"></a></p>
+<blockquote>
+<p>注意：生成之后及时将 Token 复制到你的本地，因为一旦关闭网页将不能再看到它。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="2-配置picGo"><a href="#2-配置picGo" class="headerlink" title="2. 配置picGo"></a>2. 配置picGo</h2><hr>
+<ol>
+<li><p>下载 PicGo</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
+<blockquote>
+<p>mac 用户选择 .dmg 下载，windwos 选择 .exe下载</p>
+</blockquote>
+<p>详细内容请参考 PicGo 文档：<a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/">https://picgo.github.io/PicGo-Doc/</a></p>
+<ul>
+<li><p>可能遇到的问题：</p>
+<p>Mac系统安装PicGo时打开报错：文件已损坏，您应该将它移到废纸篓</p>
+</li>
+<li><p>解决办法<br>打开终端输入以下内容，“为安装路径，默认是以下路径”</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">sudo xattr -d com<span class="hljs-selector-class">.apple</span><span class="hljs-selector-class">.quarantine</span> <span class="hljs-string">&quot;/Applications/PicGo.app&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>按照提示输入电脑锁屏密码回车即可</p>
+</li>
+</ul>
+</li>
+<li><p>配置picGo</p>
+<blockquote>
+<p>本文仅介绍 PicGo 配置 GitHub 图床，若想配置其它图床，请参考文档：<a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E5%9B%BE%E5%BA%8A%E5%8C%BA">PicGo指南——配置手册——图床区</a></p>
+</blockquote>
+<p>GitHub 图床： </p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs awk">&#123;<br><span class="hljs-string">&quot;repo&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-regexp">//</span> 仓库名，格式是username/reponame<br><span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-regexp">//</span> github token<br><span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-regexp">//</span> 自定义存储路径，比如img/<br><span class="hljs-string">&quot;customUrl&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-regexp">//</span> 自定义域名，注意要加http:<span class="hljs-regexp">//</span>或者https:<span class="hljs-regexp">//</span><br><span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;&quot;</span> <span class="hljs-regexp">//</span> 分支名，默认是main<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pukueh/ImagineHosting@main/images_for_blogs/202408020026149.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><p>设定仓库名：<code>&lt;用户名/图床仓库名&gt;</code> 格式</p>
+</li>
+<li><p>设定分支名：<code>main</code></p>
+</li>
+<li><p>设定Token：粘贴之前生成的 Token</p>
+</li>
+<li><p>指定存储路径：如 <code>images_for_blogs/</code>，会在仓库下自动创建 images_for_blogs&#x2F; 文件夹，图片储存在此文件夹下</p>
+</li>
+<li><p>设定自定义域名：<code>https://cdn.jsdelivr.net/gh/用户名/图床仓库名</code></p>
+<p>比如 <code>https://cdn.jsdelivr.net/gh/pukueh/ImagineHosting@main</code></p>
+<p>即：</p>
+<p><code>https://cdn.jsdelivr.net/gh/&lt;用户名&gt;/&lt;仓库名&gt;@&lt;发布版本号&gt;/&lt;文件路径&gt;</code></p>
+<blockquote>
+<p>在图片上传后，PicGo会生成图片访问链接</p>
+<p>因为我们使用 jsDelivr 加速访问，所以设置为<code>https://cdn.jsdelivr.net/gh/用户名/图床仓库名</code> 格式</p>
+<p>如果发现无法访问，请添加上版本号</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="五、开始使用"><a href="#五、开始使用" class="headerlink" title="五、开始使用"></a>五、开始使用</h1><ul>
+<li>到这里图床基本搭建完成，可以配合vs code，typora等应用进行博文写作</li>
+<li>拖拽或点击上传图片</li>
+<li>提示成功上传到 GitHub 仓库</li>
+<li>复制 Markdown 外链，插入 Markdown 笔记中</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pukueh/ImagineHosting@main/images_for_blogs/202408020031502.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>快速上手请参考：<a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/getting-started.html">PicGo指南——快速上手</a></p>
+</blockquote>
+<h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><hr>
+<ul>
+<li>下面是一些可能用到的文章。</li>
+</ul>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.pseudoyu.com/zh/2024/06/30/free_image_hosting_system_using_r2_webp_cloud_and_picgo/">从零开始搭建你的免费图床系统（Cloudflare R2 + WebP Cloud + PicGo）</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/librarookie/p/15467104.html">VScode + PicGo + Github + jsDelivr 搭建稳定快速高效图床</a></li>
+</ul>
+<hr>
 
                 
               </div>
@@ -318,8 +458,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2024/07/31/hello-world/</div>
+      <div>基于GitHub+jsDelivr+PicGo方案的图床搭建</div>
+      <div>http://example.com/2024/07/02/基于GitHub-jsDelivr-PicGo方案的图床搭建/</div>
     </div>
     <div class="license-meta">
       
@@ -331,7 +471,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>July 31, 2024</div>
+          <div>July 2, 2024</div>
         </div>
       
       
@@ -363,15 +503,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/31/First/" title="Design and Analysis of Algorithms Review">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Design and Analysis of Algorithms Review</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2024/06/02/First/" title="Design and Analysis of Algorithms Review">
+                        <span class="hidden-mobile">Design and Analysis of Algorithms Review</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
